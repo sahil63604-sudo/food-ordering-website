@@ -34,7 +34,7 @@ const LoginPage = ({ setadminlogin, adminlogin }) => {
     if (data.token) {
       
      document.cookie = `token=${data.token}; max-age=600; path=/`;
-console.log(document.cookie);
+
       swal.fire({
         title: "Access Granted ✅",
         text: "Redirecting to the Admin Dashboard...",

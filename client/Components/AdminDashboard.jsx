@@ -142,22 +142,22 @@ const AdminDashboard = () => {
 
       <tbody>
         {order.slice(0,4).map((item)=>{
-          return <tr className="border-b hover:bg-gray-50 transition">
+          return <tr key={item._id} className="border-b hover:bg-gray-50 transition">
           <td className="px-5 py-4 font-medium">#{item._id.slice(-6)}</td>
           {item.cartItems.map((data) => (
-      <p
+      <td
         key={data._id}
-        className="bg-orange-100 text-orange-700 px-2 py-1 rounded-full text-xs "
+        className=" text-orange-700 px-1 py-1 rounded-full text-xs "
       >
         {data.name}
-      </p>
+      </td>
     ))}
           <td className="px-5 py-4 font-semibold text-green-600">₹{item.grandTotal}</td>
           <td className="px-5 py-4 text-center">
-            <p className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
-              {item.orderStatus}
-            </p>
-          </td>
+  <span className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold">
+    {item.orderStatus}
+  </span>
+</td>
         </tr>
         })}
       </tbody>
@@ -197,7 +197,7 @@ const AdminDashboard = () => {
 
       <tbody>
        {reservation.slice(0,4).map((info)=>{
-        return  <tr className="border-b hover:bg-gray-50 transition">
+        return  <tr key={info._id} className="border-b hover:bg-gray-50 transition">
           <td className="px-5 py-4 font-medium">#{info._id.slice(-6)}</td>
           <td className="px-5 py-4">{info.guests}</td>
           <td className="px-5 py-4">{new Date(info.date).toLocaleDateString("en-IN")}</td>

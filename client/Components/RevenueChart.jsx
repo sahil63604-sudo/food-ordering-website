@@ -22,7 +22,6 @@ export default function RevenueChart({data,pieData }) {
   "#8b5cf6",
 ];
 
-console.log("pieData =", pieData);
   return (
 <section className="grid grid-cols-2 gap-6">
 

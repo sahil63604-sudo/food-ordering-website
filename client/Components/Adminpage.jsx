@@ -62,7 +62,7 @@ if (!document.cookie.includes("token=")) {
 
   <div className="leading-tight">
     <h3 className="font-semibold text-gray-800">
-      Preet Singh
+      Malik sahib
     </h3>
 
     <p className="text-xs text-gray-500">

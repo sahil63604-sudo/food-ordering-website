@@ -45,12 +45,7 @@ async function getCartItem(req, res) {
     try {
             let {userId}=req.params;
         const cart = await CartModel.find({userId});
-            
-            // if (cart.userId==CompareUserId) {
-            //     res.json(cart.item)
-            //     console.log(cart.item);
-                
-            // }
+          
         res.json(cart);
 
     } catch (err) {

@@ -68,7 +68,7 @@ function App() {
   if (loading) {
     return <Loader />
   }
-  console.log(confirm);
+ 
 
   if (adminlogin) {
     return <LoginPage setadminlogin={setAdminlogin} adminlogin={adminlogin} />
